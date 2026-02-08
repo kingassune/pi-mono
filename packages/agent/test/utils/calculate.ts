@@ -8,7 +8,11 @@ export interface CalculateResult extends AgentToolResult<undefined> {
 
 export function calculate(expression: string): CalculateResult {
 	try {
-		const result = new Function(`return ${expression}`)();
+		// Validate that expression only contains safe math characters
+		if (!/^[\d\s+\-*/().%]+$/.test(expression)) {
+			throw new Error(`Invalid characters in expression: ${expression}`);
+		}
+		const result = new Function(`"use strict"; return (${expression})`)();
 		return { content: [{ type: "text", text: `${expression} = ${result}` }], details: undefined };
 	} catch (e: any) {
 		throw new Error(e.message || String(e));

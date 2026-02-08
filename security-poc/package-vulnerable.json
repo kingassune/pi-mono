@@ -1,0 +1,10 @@
+{
+  "name": "security-poc-vulnerable",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fast-xml-parser": "5.2.5",
+    "@isaacs/brace-expansion": "5.0.0",
+    "glob": "11.0.3"
+  }
+}

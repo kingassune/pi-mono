@@ -1,0 +1,4 @@
+services:
+  security-poc:
+    build: .
+    command: bash run-all.sh

@@ -45,5 +45,9 @@
 		"@mariozechner/jiti": "^2.6.5",
 		"@mariozechner/pi-coding-agent": "^0.30.2",
 		"get-east-asian-width": "^1.4.0"
+	},
+	"overrides": {
+		"fast-xml-parser": "^5.3.4",
+		"@isaacs/brace-expansion": "^5.0.1"
 	}
 }
